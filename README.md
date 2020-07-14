@@ -1,2 +1,2 @@
 # static
-Jenkins Project
+Jenkins Udacity Project 3
