@@ -10,6 +10,12 @@ pipeline {
                  '''
              }
          }
+         stage('Lint HTML') {
+              steps {
+                   sh 'echo "Linting with Tidy"'
+                   sh 'tidy -q -e *.html'
+              }
+         }
          stage('Upload to AWS') {
               steps {
                   withAWS(region:'eu-west-1',credentials:'aws-static') {
